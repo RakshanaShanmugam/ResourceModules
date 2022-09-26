@@ -99,8 +99,7 @@ jobs:
             Write-Verbose "ad"
             Write-Verbose ${{ env.WorkloadFolderName }}
             Write-Verbose "GIT ADD..." -Verbose
-            git add $env:GITHUB_WORKSPACE/${{ env.WorkloadFolderName }}/ $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/src/"${{ env.WorkloadFolderName }}"_Settings.json
-            git add -a
+            git add "./${{ env.WorkloadFolderName }}"
             
             Write-Verbose "GIT REMOVE..." -Verbose
             git rm $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
@@ -109,7 +108,7 @@ jobs:
             git commit -m "Update from Build"
 
             Write-Verbose "Pushing the changes..." -Verbose
-            git push origin "${{ env.newbranchname }}"
+            git push origin "${{ env.newbranchname }}" -f
 
             Write-Verbose "CHECK GIT STATUS..." -Verbose
             git status
