@@ -61,7 +61,9 @@ function DiscoverResources {
             #Generate-ARMParameters -exportedArmLocation $resourceGroupTemplatePath -proccessedArmLocation $resourceGroupParameterTypePath
 
             foreach ($resource in $resources) {
+                Write-Host 'test value'
                 $resourceType = $resource.ResourceType
+                Write-Host 'after test'
                 $resourceType = $resourceType.Replace('/', '_')
                 $resourcePath = (Join-Path -Path $resourceGroupPath -ChildPath "/$($resourceType)")
                 $resourceParameterPath = (Join-Path -Path $resourcePath -ChildPath '/parameters')
