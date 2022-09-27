@@ -94,12 +94,12 @@ jobs:
 
             Write-Verbose "git pull...." -Verbose
             git pull origin ${{ env.newbranchname }}
-            Write-Verbose "sdf"
-            Write-Verbose $env:GITHUB_WORKSPACE/${{ env.WorkloadFolderName }}/
-            Write-Verbose "ad"
-            Write-Verbose ${{ env.WorkloadFolderName }}
+            Write-Verbose "sdf" -Verbose
+            Write-Verbose $env:GITHUB_WORKSPACE/${{ env.WorkloadFolderName }}/ -Verbose
+            Write-Verbose "ad" -Verbose
+            Write-Verbose ${{ env.WorkloadFolderName }} -Verbose
             Write-Verbose "GIT ADD..." -Verbose
-            git add "./ResourceModules/${{ env.WorkloadFolderName }}/"
+            git add /${{ env.WorkloadFolderName }}
             
             Write-Verbose "GIT REMOVE..." -Verbose
             git rm $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
