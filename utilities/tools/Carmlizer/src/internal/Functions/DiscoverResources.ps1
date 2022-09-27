@@ -39,20 +39,20 @@ function DiscoverResources {
             if (!(Test-Path -Path $resourceGroupTemplateFolderPath) ) {
                 New-Item -Path $resourceGroupTemplateFolderPath -ItemType Directory
             }
-            $resourceGroupParametersFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/parameters'
-            if (!(Test-Path -Path $resourceGroupParametersFolderPath) ) {
-                New-Item -Path $resourceGroupParametersFolderPath -ItemType Directory
-            }
-            $resourceGrouppipelineFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/pipelines'
-            if (!(Test-Path -Path $resourceGrouppipelineFolderPath) ) {
-                New-Item -Path $resourceGrouppipelineFolderPath -ItemType Directory
-                New-Item -Path "$resourceGrouppipelineFolderPath/Microsoft.Resources_resourceGroups.yml" -ItemType File
-            }
-            $resourceGroupValidationArtifactFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/validationartifacts'
-            if (!(Test-Path -Path $resourceGroupValidationArtifactFolderPath) ) {
-                New-Item -Path $resourceGroupValidationArtifactFolderPath -ItemType Directory
-                New-Item -Path "$resourceGroupValidationArtifactFolderPath/$($resourceGroup.ResourceGroupName).validation.txt" -ItemType File
-            }
+            #$resourceGroupParametersFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/parameters'
+            #if (!(Test-Path -Path $resourceGroupParametersFolderPath) ) {
+            #    New-Item -Path $resourceGroupParametersFolderPath -ItemType Directory
+            #}
+            #$resourceGrouppipelineFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/pipelines'
+            #if (!(Test-Path -Path $resourceGrouppipelineFolderPath) ) {
+            #    New-Item -Path $resourceGrouppipelineFolderPath -ItemType Directory
+            #    New-Item -Path "$resourceGrouppipelineFolderPath/Microsoft.Resources_resourceGroups.yml" -ItemType File
+            #}
+            #$resourceGroupValidationArtifactFolderPath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath '/validationartifacts'
+            #if (!(Test-Path -Path $resourceGroupValidationArtifactFolderPath) ) {
+            #    New-Item -Path $resourceGroupValidationArtifactFolderPath -ItemType Directory
+            #    New-Item -Path "$resourceGroupValidationArtifactFolderPath/$($resourceGroup.ResourceGroupName).validation.txt" -ItemType File
+            #}
             $resourceGroupTemplatePath = Join-Path -Path $resourceGroupTemplateFolderPath -ChildPath "$($resourceGroup.ResourceGroupName).deploy.json"
             $resourceGroupParameterTypePath = Join-Path -Path $resourceGroupParametersFolderPath -ChildPath "$($resourceGroup.ResourceGroupName).parameters.json"
             ## Exporting template to the processed location
@@ -103,7 +103,7 @@ function DiscoverResources {
                     New-Item -Path "$validationArtifactPath/$rName.validation.txt" -ItemType File
                 }
                 ## Generating Parameter files for resources
-                Convert-ARMToBicepParameters -exportedArmLocation $tempExportPath -proccessedArmLocation $paramExportPath -resourceType $resourceType
+                Convert-ARMToBicepParameters -exportedArmLocation $tempExportPath -proccessedArmLocation $paramExportPath
 
 
             }
