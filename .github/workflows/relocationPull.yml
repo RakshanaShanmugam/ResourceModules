@@ -109,7 +109,7 @@ jobs:
 
             Write-Verbose "Pushing the changes..." -Verbose
             git push origin "${{ env.newbranchname }}" -f
-            gh pr create --title "test" --body "-" --base ${{ github.ref }} --head ${{ env.newbranchname }}
+            gh pr create --title "test" --body "-" --base ${{ env.newbranchname }} --head ${{ env.newbranchname }}
             gh pr merge "${{ env.newbranchname }}" --squash
             Write-Verbose "CHECK GIT STATUS..." -Verbose
             git status
