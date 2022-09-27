@@ -99,8 +99,8 @@ jobs:
             Write-Verbose "ad" -Verbose
             Write-Verbose ${{ env.WorkloadFolderName }} -Verbose
             Write-Verbose "GIT ADD..." -Verbose
-            git add ./${{ env.WorkloadFolderName }}
-            
+            git add -a
+
             Write-Verbose "GIT REMOVE..." -Verbose
             git rm $env:GITHUB_WORKSPACE/utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
 
