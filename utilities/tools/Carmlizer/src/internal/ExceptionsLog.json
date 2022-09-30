@@ -1,3 +1,9 @@
 {
-  
+  "Pull-Pipeline_48e818c6-ca2f-45b1-ac98-e0ece241c73b": {
+    "ScriptPath": "/home/runner/work/_temp/48e818c6-ca2f-45b1-ac98-e0ece241c73b.ps1",
+    "Time": "Friday, 30 September 2022 10:06:32",
+    "Name": "Pull-Pipeline_48e818c6-ca2f-45b1-ac98-e0ece241c73b",
+    "Exception": "Cannot find path '/home/runner/work/ResourceModules/ResourceModules/src' because it does not exist.",
+    "Result": "Failed"
+  }
 }
