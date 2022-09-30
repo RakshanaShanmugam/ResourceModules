@@ -16,7 +16,7 @@
       "NetworkWatcherRG"
     ],
     "ValidationSubscriptionId": "6e74621a-b3ca-4233-b10a-19367338e576",
-    "LogPath": "utilities/tools/Carmlizer/src/internal/ExceptionsLog.json",
+    "LogPath": "src/internal/ExceptionsLog.json",
     "WorkloadName": "Infra_Apps",
     "TargetLocation": "canadaeast",
     "DeploymentSequence": []
