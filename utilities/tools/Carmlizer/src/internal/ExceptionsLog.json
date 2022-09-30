@@ -1,3 +1,9 @@
 {
-  
+  "Pull-Pipeline_72b8ba93-c4f7-47fc-84d1-ed6a9666e019": {
+    "ScriptPath": "/home/runner/work/_temp/72b8ba93-c4f7-47fc-84d1-ed6a9666e019.ps1",
+    "Exception": "Cannot find path '/home/runner/work/ResourceModules/ResourceModules/src' because it does not exist.",
+    "Name": "Pull-Pipeline_72b8ba93-c4f7-47fc-84d1-ed6a9666e019",
+    "Time": "Friday, 30 September 2022 09:59:29",
+    "Result": "Failed"
+  }
 }
