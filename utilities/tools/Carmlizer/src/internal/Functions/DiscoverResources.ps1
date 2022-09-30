@@ -63,6 +63,7 @@ function DiscoverResources {
 
                 ## Generating Parameter files for resources
                 Convert-ARMToBicepParameters -exportedArmLocation $tempExportPath -proccessedArmLocation $paramExportPath
+                Write-Host 'Enhjd'
             }
 
         }

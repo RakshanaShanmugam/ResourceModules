@@ -132,5 +132,7 @@ function Convert-ARMToBicepParameters {
     $parameterToObj = ($parameters | ConvertTo-Json -Depth 100 | jq -r -f $jqJsonTemplate | ConvertFrom-Json)
     Write-Host 'parameter to object' $parameterToObj
     ConvertTo-Json -InputObject $parameterToObj -Depth 100 | Set-Content -Path $proccessedArmLocation
+    $json = Get-Content -Path $proccessedArmLocation
+    Write-Host 'sdfc' $json
 }
 
