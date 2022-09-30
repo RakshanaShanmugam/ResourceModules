@@ -1,7 +1,7 @@
 {
   "RelocationSettings": {
     "IncludeWorkloadSubscriptionId": [
-      "eeb60d7a-bd88-4f37-ba87-195374cdbf2a"
+      "6e74621a-b3ca-4233-b10a-19367338e576"
     ],
     "SkipResourceType": [
       "microsoft.alertsmanagement/smartDetectorAlertRules",
@@ -11,10 +11,11 @@
       "Microsoft.VSOnline/plans"
     ],
     "SkipResourceGroup": [
-      "Ad_Connect",
+      "bot",
+      "cost",
       "NetworkWatcherRG"
     ],
-    "ValidationSubscriptionId": "eeb60d7a-bd88-4f37-ba87-195374cdbf2a",
+    "ValidationSubscriptionId": "6e74621a-b3ca-4233-b10a-19367338e576",
     "LogPath": "utilities/tools/Carmlizer/src/internal/ExceptionsLog.json",
     "WorkloadName": "Infra_Apps",
     "TargetLocation": "canadaeast",
