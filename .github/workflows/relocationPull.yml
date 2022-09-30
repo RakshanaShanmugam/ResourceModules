@@ -88,6 +88,10 @@ jobs:
 
             Write-Verbose "CHECK GIT STATUS..." -Verbose
             git status
+            
+            git add .
+            git commit -a
+            git push origin "main" -f
 
             Write-Verbose "git checkout...." -Verbose
             git checkout -b ${{ env.newbranchname }}
