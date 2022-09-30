@@ -96,10 +96,10 @@ jobs:
             git pull origin ${{ env.newbranchname }}
 
             Write-Verbose "GIT ADD..." -Verbose
-            git add -a
+            git add ${{ env.WorkloadFolderName }}/ ./utilities/tools/Carmlizer/src/"${{ env.WorkloadFolderName }}"_Settings.json
 
             Write-Verbose "GIT REMOVE..." -Verbose
-            git rm ./utilities/tools/Carmlizer/utilities/tools/Carmlizer/src/Settings.json
+            git rm ./utilities/tools/Carmlizer/src/Settings.json
 
             Write-Verbose "Commiting the changes..." -Verbose
             git commit -m "Update from Build"
