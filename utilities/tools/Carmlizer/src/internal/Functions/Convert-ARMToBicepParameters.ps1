@@ -8,7 +8,7 @@ function Convert-ARMToBicepParameters {
     $inputJson = Get-Content -Path $exportedArmLocation
     $jsonConvertInputJson = $inputJson | ConvertFrom-Json
     $count = 0
-    $parameterObjs = Get-Content -Path '.\src\data\DefaultParameterTemplate.json'
+    $parameterObjs = Get-Content -Path '.\utilities\tools\Carmlizer\src\data\DefaultParameterTemplate.json'
     $parameterObj = $parameterObjs | ConvertFrom-Json
     foreach ($eachInputJson in $jsonConvertInputJson) {
         foreach ($eachResourceInputJson in $eachInputJson.resources) {
@@ -126,8 +126,7 @@ function Convert-ARMToBicepParameters {
             }
         }
     }
-
-    $jqJsonTemplate = "$statePath/src/storage_parameter_jq.jq"
+    $jqJsonTemplate = "$statePath/utilities/tools/Carmlizer/src/internal/storage_parameter_jq.jq"
     $parameters = $parameterObj.parameters
     Write-Host $parameters
     $parameterToObj = ($parameters | ConvertTo-Json -Depth 100 | jq -r -f $jqJsonTemplate | ConvertFrom-Json)

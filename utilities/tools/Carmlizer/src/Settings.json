@@ -1,24 +1,23 @@
 {
   "RelocationSettings": {
     "IncludeWorkloadSubscriptionId": [
-      "6e74621a-b3ca-4233-b10a-19367338e576"
+      "eeb60d7a-bd88-4f37-ba87-195374cdbf2a"
     ],
     "SkipResourceType": [
       "microsoft.alertsmanagement/smartDetectorAlertRules",
       "Microsoft.PowerPlatform/accounts",
       "Microsoft.PowerPlatform/enterprisePolicies",
       "microsoft.visualstudio/account",
-      "Microsoft.VSOnline/plans"   
+      "Microsoft.VSOnline/plans"
     ],
     "SkipResourceGroup": [
-      "any REsource Group to skip"
+      "Ad_Connect",
+      "NetworkWatcherRG"
     ],
-    "ValidationSubscriptionId": "337b38b9-54ed-4cf7-aa4e-aa17afd0e128",    
-    "LogPath": "src/ExceptionsLog.json",
+    "ValidationSubscriptionId": "eeb60d7a-bd88-4f37-ba87-195374cdbf2a",
+    "LogPath": "utilities/tools/Carmlizer/src/internal/ExceptionsLog.json",
     "WorkloadName": "Infra_Apps",
     "TargetLocation": "canadaeast",
-    "DeploymentSequence": [
-      
-    ]
+    "DeploymentSequence": []
   }
 }
